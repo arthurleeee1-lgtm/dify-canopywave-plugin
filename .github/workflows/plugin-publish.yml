@@ -43,7 +43,7 @@ jobs:
           echo "Plugin version: $VERSION"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
-          # Use GitHub username (can be different from manifest author)
+          # Hardcode GitHub username (different from manifest author for display)
           AUTHOR="arthurleeee1-lgtm"
           echo "Plugin author: $AUTHOR"
           echo "author=$AUTHOR" >> $GITHUB_OUTPUT
