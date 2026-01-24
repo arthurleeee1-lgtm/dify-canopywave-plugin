@@ -128,11 +128,55 @@ jobs:
             --repo langgenius/dify-plugins \
             --head "${{ steps.get_basic_info.outputs.author }}:bump-${{ steps.get_basic_info.outputs.plugin_name }}-plugin-${{ steps.get_basic_info.outputs.version }}" \
             --base main \
-            --title "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin to version ${{ steps.get_basic_info.outputs.version }}" \
-            --body "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin package to version ${{ steps.get_basic_info.outputs.version }}
+            --title "feat: add ${{ steps.get_basic_info.outputs.plugin_name }} plugin to Dify Marketplace" \
+            --body "# Plugin Submission Form
 
-            Changes:
-            - Updated plugin package file" || echo "PR already exists or creation skipped."
+## 1. Metadata
+- **Plugin Author:** ${{ steps.get_basic_info.outputs.author }}
+- **Plugin Name:** ${{ steps.get_basic_info.outputs.plugin_name }}
+- **Repository URL:** https://github.com/${{ steps.get_basic_info.outputs.author }}/dify-canopywave-plugin
+
+## 2. Submission Type
+- [x] New plugin submission
+- [ ] Version update for existing plugin
+
+## 3. Description
+Canopy Wave plugin provides access to state-of-the-art large language models hosted on Canopy Wave's high-performance inference platform.
+
+Supported models include:
+- DeepSeek V3.1, V3.2, R1-Distill, Math-V2
+- GLM-4.7
+- Qwen3-30B, Qwen3-Coder-30B
+- MiniMax M2.1, Kimi K2-Thinking
+- MIMO V2-Flash, GPT-OSS-120B
+
+## 4. Checklist
+- [x] I have read and followed the Publish to Dify Marketplace guidelines
+- [x] I have read and comply with the Plugin Developer Agreement
+- [x] I confirm my plugin works properly on both Dify Community Edition and Cloud Version
+- [x] I confirm my plugin has been thoroughly tested for completeness and functionality
+- [x] My plugin brings new value to Dify
+
+## 5. Documentation Checklist
+- [x] Step-by-step setup instructions
+- [x] Detailed usage instructions
+- [x] All required APIs and credentials are clearly listed
+- [x] Connection requirements and configuration details
+- [x] Link to the repository for the plugin source code
+
+## 6. Privacy Protection Information
+Based on Dify Plugin Privacy Protection Guidelines:
+
+### Data Collection
+- User prompts (for model inference)
+- API credentials (stored by Dify)
+- Model responses
+
+### Privacy Policy
+- Privacy Policy URL: https://canopywave.com/privacy
+- All data is transmitted via HTTPS to Canopy Wave API
+- No user data is stored locally by the plugin
+" || echo "PR already exists or creation skipped."
 
       - name: Print environment info
         run: |
