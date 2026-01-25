@@ -44,5 +44,5 @@ This plugin enables Dify users to leverage powerful AI models through a simple A
 ## Links
 
 - [Canopy Wave Website](https://canopywave.com)
-- [API Documentation](https://docs.canopywave.io)
-- [Support](mailto:support@canopywave.io)
+- [API Documentation](https://canopywave.com/docs)
+- [Support](https://ticket.canopywave.io/otobo/customer.pl)
