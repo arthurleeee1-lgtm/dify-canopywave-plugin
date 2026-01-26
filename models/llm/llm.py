@@ -94,7 +94,12 @@ class CanopywaveLargeLanguageModel(LargeLanguageModel):
             **model_parameters
         }
         
-        if stop:
+        # Models that don't support stop parameter
+        no_stop_models = [
+            "openai/gpt-oss-120b",
+        ]
+        
+        if stop and model not in no_stop_models:
             payload["stop"] = stop
 
         try:
