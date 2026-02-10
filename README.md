@@ -1,7 +1,7 @@
 # Canopy Wave
 
 **Author:** arthur  
-**Version:** 0.0.4  
+**Version:** 0.0.5  
 **Type:** model
 
 ## Description
@@ -12,19 +12,15 @@ This plugin enables Dify users to leverage powerful AI models through a simple A
 
 ## Supported Models
 
-| Model                             | Description                           |
-| --------------------------------- | ------------------------------------- |
-| deepseek/deepseek-chat-v3.1       | DeepSeek V3.1 chat model              |
-| deepseek/deepseek-chat-v3.2       | DeepSeek V3.2 chat model              |
-| deepseek/deepseek-r1-distill      | DeepSeek R1 distilled reasoning model |
-| deepseek/deepseek-math-v2         | DeepSeek Math specialized model       |
-| zai/glm-4.7                       | GLM-4.7 chat model                    |
-| Qwen/Qwen3-30B-A3B-Instruct       | Qwen3 30B instruction model           |
-| Qwen/Qwen3-Coder-30B-A3B-Instruct | Qwen3 Coder 30B                       |
-| minimax/minimax-m2.1              | MiniMax M2.1 chat model               |
-| moonshot/kimi-k2-thinking         | Kimi K2 thinking model                |
-| xiaomimimo/mimo-v2-flash          | MIMO V2 Flash model                   |
-| openai/gpt-oss-120b               | GPT OSS 120B model                    |
+| Model                       | Description                        |
+| --------------------------- | ---------------------------------- |
+| deepseek/deepseek-chat-v3.1 | DeepSeek V3.1 chat model           |
+| deepseek/deepseek-chat-v3.2 | DeepSeek V3.2 chat model           |
+| zai/glm-4.7                 | GLM-4.7 chat model                 |
+| minimax/minimax-m2.1        | MiniMax M2.1 chat model            |
+| moonshotai/kimi-k2-thinking | Kimi K2 thinking model             |
+| moonshotai/kimi-k2.5        | Kimi K2.5 multimodal agentic model |
+| xiaomimimo/mimo-v2-flash    | MIMO V2 Flash model                |
 
 ## Setup
 

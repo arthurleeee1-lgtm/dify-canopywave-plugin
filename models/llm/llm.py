@@ -59,10 +59,6 @@ class CanopywaveLargeLanguageModel(LargeLanguageModel):
         # Models that use the 'api' endpoint
         api_endpoint_models = [
             "xiaomimimo/mimo-v2-flash",
-            "openai/gpt-oss-120b",
-            "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-            "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
-            "deepseek-ai/DeepSeek-Math-V2"
         ]
         
         if model in api_endpoint_models:
@@ -94,9 +90,18 @@ class CanopywaveLargeLanguageModel(LargeLanguageModel):
             **model_parameters
         }
         
+        # Models that don't support frequency_penalty/presence_penalty
+        no_penalty_models = [
+            "moonshotai/kimi-k2.5",
+        ]
+        
+        if model in no_penalty_models:
+            payload.pop("frequency_penalty", None)
+            payload.pop("presence_penalty", None)
+        
         # Models that don't support stop parameter
         no_stop_models = [
-            "openai/gpt-oss-120b",
+            "deepseek/deepseek-chat-v3.1",
         ]
         
         if stop and model not in no_stop_models:

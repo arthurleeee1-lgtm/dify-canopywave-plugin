@@ -188,7 +188,10 @@ cacert.pem
 # Test files
 test_*.py
 TESTING.md
+GUIDE.md
 verify_role.py
 update_params.py
 package_plugin.py
 
+# Environment files
+.env.example
