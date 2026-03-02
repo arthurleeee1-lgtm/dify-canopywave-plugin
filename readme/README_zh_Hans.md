@@ -1,7 +1,7 @@
 # Canopy Wave
 
 **作者:** arthur
-**版本:** 0.0.5
+**版本:** 0.0.6
 **类型:** 模型
 
 ## 描述
@@ -14,13 +14,14 @@ Canopy Wave 插件让 Dify 用户能够通过简单的 API 集成，使用托管
 
 | 模型                        | 描述                       |
 | --------------------------- | -------------------------- |
-| deepseek/deepseek-chat-v3.1 | DeepSeek V3.1 对话模型     |
 | deepseek/deepseek-chat-v3.2 | DeepSeek V3.2 对话模型     |
 | zai/glm-4.7                 | GLM-4.7 对话模型           |
+| zai/glm-5                   | GLM-5 对话模型             |
 | minimax/minimax-m2.1        | MiniMax M2.1 对话模型      |
-| moonshotai/kimi-k2-thinking | Kimi K2 思考模型           |
+| minimax/minimax-m2.5        | MiniMax M2.5 对话模型      |
 | moonshotai/kimi-k2.5        | Kimi K2.5 多模态智能体模型 |
 | xiaomimimo/mimo-v2-flash    | MIMO V2 Flash 模型         |
+| qwen/qwen-3.5               | Qwen 3.5 对话模型          |
 
 ## 设置
 

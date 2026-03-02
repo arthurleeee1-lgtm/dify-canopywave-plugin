@@ -1,7 +1,7 @@
 # Canopy Wave
 
 **Author:** arthur  
-**Version:** 0.0.5  
+**Version:** 0.0.6  
 **Type:** model
 
 ## Description
@@ -14,13 +14,14 @@ This plugin enables Dify users to leverage powerful AI models through a simple A
 
 | Model                       | Description                        |
 | --------------------------- | ---------------------------------- |
-| deepseek/deepseek-chat-v3.1 | DeepSeek V3.1 chat model           |
 | deepseek/deepseek-chat-v3.2 | DeepSeek V3.2 chat model           |
 | zai/glm-4.7                 | GLM-4.7 chat model                 |
+| zai/glm-5                   | GLM-5 chat model                   |
 | minimax/minimax-m2.1        | MiniMax M2.1 chat model            |
-| moonshotai/kimi-k2-thinking | Kimi K2 thinking model             |
+| minimax/minimax-m2.5        | MiniMax M2.5 chat model            |
 | moonshotai/kimi-k2.5        | Kimi K2.5 multimodal agentic model |
 | xiaomimimo/mimo-v2-flash    | MIMO V2 Flash model                |
+| qwen/qwen-3.5               | Qwen 3.5 chat model                |
 
 ## Setup
 
