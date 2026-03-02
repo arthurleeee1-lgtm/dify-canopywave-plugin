@@ -23,7 +23,7 @@ class CanopywaveModelProvider(ModelProvider):
             # Use a representative model for validation
             # This delegates the actual API call to the LLM class's _invoke or validate_credentials logic
             model_instance.validate_credentials(
-                model="deepseek/deepseek-chat-v3.1", 
+                model="deepseek/deepseek-chat-v3.2", 
                 credentials=credentials
             )
         except CredentialsValidateFailedError as ex:

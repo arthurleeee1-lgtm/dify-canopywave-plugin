@@ -127,7 +127,7 @@ jobs:
           PLUGIN_NAME: ${{ steps.get_basic_info.outputs.plugin_name }}
           VERSION: ${{ steps.get_basic_info.outputs.version }}
         run: |
-          cat << EOF > /tmp/pr_body.md
+          cat <<EOF > /tmp/pr_body.md
           # Plugin Submission Form
 
           ## 1. Metadata
@@ -136,18 +136,25 @@ jobs:
           - **Repository URL:** https://github.com/${AUTHOR}/dify-canopywave-plugin
 
           ## 2. Submission Type
-          - [x] New plugin submission
-          - [ ] Version update for existing plugin
+          - [ ] New plugin submission
+          - [x] Version update for existing plugin
 
           ## 3. Description
           Canopy Wave plugin provides access to state-of-the-art large language models hosted on Canopy Wave's high-performance inference platform.
 
+          **Version ${VERSION} Updates:**
+          - Added new models: GLM-5, MiniMax-M2.5, Qwen3.5-397B-A17B.
+          - Removed inactive models: DeepSeek-V3.1, Kimi-K2-Thinking.
+          - Fixed unsupported \`stop\` parameter being sent to all models.
+          - Removed unsupported \`frequency_penalty\`/\`presence_penalty\` from MiniMax models.
+
           Supported models include:
-          - DeepSeek V3.1, V3.2, R1-Distill, Math-V2
-          - GLM-4.7
-          - Qwen3-30B, Qwen3-Coder-30B
-          - MiniMax M2.1, Kimi K2-Thinking
-          - MIMO V2-Flash, GPT-OSS-120B
+          - GLM-5, GLM-4.7
+          - DeepSeek-V3.2
+          - Kimi-K2.5
+          - MiniMax-M2.5, MiniMax-M2.1
+          - Mimo-V2-Flash
+          - Qwen3.5-397B-A17B
 
           ## 4. Checklist
           - [x] I have read and followed the Publish to Dify Marketplace guidelines
@@ -184,7 +191,7 @@ jobs:
             --repo langgenius/dify-plugins \
             --head "${AUTHOR}:bump-${PLUGIN_NAME}-plugin-${VERSION}" \
             --base main \
-            --title "feat: add ${PLUGIN_NAME} plugin to Dify Marketplace" \
+            --title "chore: bump ${PLUGIN_NAME} plugin to version ${VERSION}" \
             --body-file /tmp/pr_body.md || echo "PR already exists or creation skipped."
 
       - name: Print environment info

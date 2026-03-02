@@ -1,15 +1,16 @@
-model: deepseek/deepseek-chat-v3.1
+model: qwen/qwen-3.5
 label:
-  zh_Hans: DeepSeek-V3.1
-  en_US: DeepSeek-V3.1
+  zh_Hans: Qwen3.5-397B-A17B
+  en_US: Qwen3.5-397B-A17B
 model_type: llm
 features:
   - stream-tool-call
-  - vision
   - tool-call
+  - vision
+  - agent-thought
 model_properties:
   mode: chat
-  context_size: 131072
+  context_size: 268288
 parameter_rules:
   - name: temperature
     use_template: temperature
@@ -23,9 +24,9 @@ parameter_rules:
     use_template: max_tokens
     default: 4096
     min: 1
-    max: 65536
+    max: 8192
 pricing:
-  input: "27.00"
-  output: "100.00"
+  input: "60.00"
+  output: "360.00"
   unit: "0.000001"
   currency: USD

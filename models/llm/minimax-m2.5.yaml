@@ -1,14 +1,15 @@
-model: minimax/minimax-m2.1
+model: minimax/minimax-m2.5
 label:
-  zh_Hans: MiniMax-M2.1
-  en_US: MiniMax-M2.1
+  zh_Hans: MiniMax-M2.5
+  en_US: MiniMax-M2.5
 model_type: llm
 features:
   - stream-tool-call
   - tool-call
+  - agent-thought
 model_properties:
   mode: chat
-  context_size: 196608
+  context_size: 209920
 parameter_rules:
   - name: temperature
     use_template: temperature

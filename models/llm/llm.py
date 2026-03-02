@@ -56,7 +56,7 @@ class CanopywaveLargeLanguageModel(LargeLanguageModel):
         # Default to inference endpoint
         url = "https://inference.canopywave.io/v1/chat/completions"
         
-        # Models that use the 'api' endpoint
+        # Models that use the 'api' endpoint (instead of 'inference')
         api_endpoint_models = [
             "xiaomimimo/mimo-v2-flash",
         ]
@@ -93,18 +93,18 @@ class CanopywaveLargeLanguageModel(LargeLanguageModel):
         # Models that don't support frequency_penalty/presence_penalty
         no_penalty_models = [
             "moonshotai/kimi-k2.5",
+            "minimax/minimax-m2.1",
+            "minimax/minimax-m2.5",
         ]
         
         if model in no_penalty_models:
             payload.pop("frequency_penalty", None)
             payload.pop("presence_penalty", None)
         
-        # Models that don't support stop parameter
-        no_stop_models = [
-            "deepseek/deepseek-chat-v3.1",
-        ]
-        
-        if stop and model not in no_stop_models:
+        # Models that support stop parameter (whitelist - most canopywave models do not support it)
+        stop_supported_models: list[str] = []
+
+        if stop and model in stop_supported_models:
             payload["stop"] = stop
 
         try:
